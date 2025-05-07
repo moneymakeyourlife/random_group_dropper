@@ -13,7 +13,9 @@ async def start_func(msg: Message, bot: Bot):
     channel_id = await get_random_channel_for_user(user_id)
 
     if channel_id is None:
-        await msg.answer("<b>Превышено количество ссылок на Ваш аккаунт</b>")
+        await msg.answer(
+            "<b>Превышено количество ссылок на Ваш аккаунт</b>", parse_mode="HTML"
+        )
         return
 
     try:
