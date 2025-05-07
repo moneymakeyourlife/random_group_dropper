@@ -13,7 +13,7 @@ async def start_func(msg: Message):
     await add_user_if_not_exists(user_id)
 
     await msg.answer(
-        text=f"Привет, <b>{msg.from_user.full_name}</b>",
+        text=f"👋 Привет, <b>{msg.from_user.full_name}</b>",
         parse_mode="html",
         reply_markup=await get_main_menu(),
     )
